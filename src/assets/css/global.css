@@ -1,0 +1,355 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+.vue-body{
+    width: 100%;
+    padding-bottom: 3.5em;
+}
+.footer{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width:100%;
+  height: 3.5em;
+  display: flex;
+  display: -webkit-flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0px 0px 4px 1px #e6e6e6;
+  -webkit-box-shadow: 0px 0px 4px 1px #e6e6e6;
+  background: #fff;
+}
+.footer>a{
+  display: inline-block;
+  width: 33.33%;
+  height: 3.125em;
+  line-height: 5.325em;
+  text-align: center;
+  border: 0;
+  color: #808080;
+  font-size: 0.8em;
+  background: none;
+  text-decoration: none;
+  position: relative;
+}
+.footer>a.active{
+  color: #30AAFF;
+}
+.footer a i{
+    display: inline-block;
+    width: 100%;
+    height: 1.8em;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.footer a i.index{
+    background: url(../images/icon-index.png);
+    background-repeat: no-repeat;
+    background-size: auto 2em;
+    background-position: center center;
+}
+.footer a.active i.index{
+    background: url(../images/icon-index-active.png);
+    background-repeat: no-repeat;
+    background-size: auto 2em;
+    background-position: center center;
+}
+.footer a i.live{
+    background: url(../images/icon-live.png);
+    background-repeat: no-repeat;
+    background-size: auto 2em;
+    background-position: center center;
+}
+.footer a.active i.live{
+    background: url(../images/icon-live-active.png);
+    background-repeat: no-repeat;
+    background-size: auto 2em;
+    background-position: center center;
+}
+.footer a i.frmTrade{
+    background: url(../images/icon-friend.png);
+    background-repeat: no-repeat;
+    background-size: auto 2em;
+    background-position: center center;
+}
+.footer a.active i.frmTrade{
+    background: url(../images/icon-friend-active.png);
+    background-repeat: no-repeat;
+    background-size: auto 2em;
+    background-position: center center;
+}
+.footer a i.my{
+    background: url(../images/icon-my.png);
+    background-repeat: no-repeat;
+    background-size: auto 2em;
+    background-position: center center;
+}
+.footer a.active i.my{
+    background: url(../images/icon-my-active.png);
+    background-repeat: no-repeat;
+    background-size: auto 2em;
+    background-position: center center;
+}
+.agent-buy{
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+.agent-buy>img{
+    width: 100%;
+    height: auto;
+}
+.agent-buy>span{
+    position: absolute;
+    top: 50%;
+    right: 1em;
+    transform: scale(1) translateY(-50%);
+    -webkit-transform: scale(1) translateY(-50%);
+    display: inline-block;
+    width: 8em;
+    height: 2em;
+    line-height: 2em;
+    border-radius: 1em;
+    -webkit-border-radius: 1em;
+    text-align: center;
+    color: #fff;
+    background: red;
+    animation: agent linear 1s infinite;
+    -webkit-animation: agent linear 1s infinite;
+    font-size: 0.9em;
+}
+@keyframes agent{
+    0%{
+        transform:scale(1) translateY(-50%);
+        -webkit-transform:scale(1) translateY(-50%);
+    }
+    25%{
+        transform:scale(1.1) translateY(-50%);
+        -webkit-transform:scale(1.1) translateY(-50%);
+    }
+    50%{
+        transform:scale(1.2) translateY(-50%);
+        -webkit-transform:scale(1.2) translateY(-50%);
+    }
+    75%{
+        transform:scale(1.1) translateY(-50%);
+        -webkit-transform:scale(1.1) translateY(-50%);
+    }
+    100%{
+        transform:scale(1) translateY(-50%);
+        -webkit-transform:scale(1) translateY(-50%);
+    }
+}
+@-webkit-keyframes agent{
+    0%{
+        transform:scale(1) translateY(-50%);
+        -webkit-transform:scale(1) translateY(-50%);
+    }
+    25%{
+        transform:scale(1.1) translateY(-50%);
+        -webkit-transform:scale(1.1) translateY(-50%);
+    }
+    50%{
+        transform:scale(1.2) translateY(-50%);
+        -webkit-transform:scale(1.2) translateY(-50%);
+    }
+    75%{
+        transform:scale(1.1) translateY(-50%);
+        -webkit-transform:scale(1.1) translateY(-50%);
+    }
+    100%{
+        transform:scale(1) translateY(-50%);
+        -webkit-transform:scale(1) translateY(-50%);
+    }
+}
+.grid-block{
+    overflow: hidden;
+    padding: 0.7em 0.5em 0;
+    border-top: 0.7em solid #f7f7f7;
+    display: flex;
+    display: -webkit-flex;
+    clear: both;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.grid-block .grid-item{
+    text-align: center;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: .85em;
+    content: '';
+    width: 32%;
+    height: 8em;
+    margin-bottom: 0.5em;
+    border: 1px solid #e6e6e6;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.grid-block .grid-item>img{
+    height: 4em;
+    width: auto;
+    margin-bottom: 0.5em;
+}
+.userInfo-block {
+    width: 100%;
+    height: 13em;
+    margin-bottom: 0.7em;
+    background: #fff;
+    padding: 0 0.7em;
+    background: url(../images/capital-bg.png) no-repeat top scroll;
+    background-size: 100% 10em;
+    padding-top: 1.5em;
+}
+.userInfo-block-con {
+    width: 99.5%;
+    height: 12em;
+    background: #fff;
+    margin: 0 auto;
+    border-radius: 0.5em;
+    -webkit-border-radius: 0.5em;
+    box-shadow: 0px 1px 5px 3px rgba(48,170,255,0.17);
+    -webkit-box-shadow: 0px 1px 5px 3px rgba(48,170,255,0.17);
+}
+.user-info{
+    width: 100%;
+    height: 8em;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    padding: 0.75em 0 0.2em;
+}
+.user-info>img{
+    width: 3.5em;
+    height: 3.5em;
+    border-radius:50%;
+    -webkit-border-radius:50%;
+}
+.user-info .user-detail{
+    width: 100%;
+    height: auto;
+    font-size: 1em;
+    color: #333;
+    text-align: center;
+}
+.user-info .user-detail .user-level{
+    position: absolute;
+    top: 2em;
+    right: 0;
+    display: inline-block;
+    height: 1.8em;
+    line-height: 1.8em;
+    text-align: right;
+    color: #fff;
+    background: #fb9b4e;
+    border-bottom-left-radius: 0.9em;
+    border-top-left-radius: 0.9em;
+    -webkit-border-bottom-left-radius: 0.9em;
+    -webkit-border-top-left-radius: 0.9em;
+    padding: 0 0.5em 0 1em;
+}
+.user-info .user-detail .block115{
+    font-size: 0.85em;
+    color: #333;
+    line-height: 1.4em;
+    margin-top: 0.5em;
+}
+.user-info .user-detail .block115 i{
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    color: #999;
+}
+.user-info .user-detail .block115 img{
+    width: 1.5em;
+    height: auto;
+    display: none;
+}
+.userInfo-block .bonus-item{
+    text-align: center;
+    position: relative;
+    color: #333;
+    height: 1.8em;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 0.9em;
+    border-right: 1px solid #e6e6e6;
+}
+.userInfo-block .bonus-item:last-child{
+    border-right: 0;
+}
+.userInfo-block .bonus-item>a{
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+.userInfo-block .bonus-item .block106{
+    color: #30AAFF;
+    font-size: 1.05em;
+}
+.bonus-box{
+	width: 100%;
+    height: 4em;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1em;
+}
+.bonus-item{
+	text-align: center;
+    flex: 1;
+}
+.my-list{
+    width: 100%;
+    height: auto;
+    padding: 0 0.7em;
+}
+.my-list-item{
+    width: 100%;
+    height: 3.4em;
+    line-height: 3.4em;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e6e6e6;
+}
+.my-list-item>img{
+    width: 1.8em;
+    height: auto;
+    margin-right: 0.7em;
+}
+.my-list-item>div{
+    width: 100%;
+    height: 3.4em;
+    line-height: 3.4em;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.my-list-item>div img{
+    width: 1.54em;
+    height: auto;
+}
